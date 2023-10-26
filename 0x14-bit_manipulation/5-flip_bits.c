@@ -1,19 +1,19 @@
 #include "main.h"
-#include <stdio.h>
  
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int diff;
-	int counter;
+	unsigned long int differnce, result;
+	unsigned int j, i;
 
-	diff = n ^ m;
-	counter = 0;
-
-	while (diff)
+	j = 0;
+	result = 1;
+	differnce = n ^ m;
+	for (i = 0; i < (sizeof(unsigned long int) * 8); i++)
 	{
-		counter++;
-		diff &= (diff - 1);
+		if (result == (differnce & result))
+			j++;
+		result <<= 1;
 	}
 
-	return (counter);
+	return (j);
 }

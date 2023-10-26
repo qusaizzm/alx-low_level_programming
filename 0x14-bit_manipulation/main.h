@@ -1,8 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
-
-#include <stdio.h>
-#include <limits.h>
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
 
 int _putchar(char c);
 unsigned int binary_to_uint(const char *b);
